@@ -1,0 +1,177 @@
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+.body{
+    display: grid;
+
+    gap: 10px;
+    grid-template-areas: 
+    "menu1"
+    "baner"
+    "contenido"
+    "footer";
+    grid-template-rows: auto 2fr auto auto;
+}
+
+.contenedor{
+    width: 90%;
+    margin: 0 auto;
+}
+.img-articulo img{
+    width: 100px;
+}
+.img-articulo{
+    border: 2px solid black;
+    width: 104px;
+   
+    
+}
+.texto-articulo h2{
+    font-size: 18px;
+    margin-top: 0;
+}
+.texto-articulo p{
+    font-size: 12px;
+}
+.link{
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    background-color: blue;
+    width: 100%;
+    border-bottom-right-radius: 30px;
+    border-top-left-radius: 30px;
+    padding: 5px;
+    text-align: center;
+}
+.body nav{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    row-gap: 10px;
+    grid-area: menu1;
+    margin-top: 10px;
+}
+.baner{
+    grid-area: baner;
+    height: 250px;
+    background-image: url(https://img.ecologiahoy.com/2017/06/paisajes-naturales-26.jpeg);
+    background-position: center center;
+    background-size: cover;
+}
+.body .contenido {
+    grid-area: contenido;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    row-gap: 10px;
+}
+.articulo {
+    text-decoration: none;
+    /* background-color: blue; */
+    width: 100%;
+    row-gap: 10px;
+    border-radius: 10px;
+    display: flex;
+    
+    
+}
+footer {
+    background-color: rgb(0, 238, 255);
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-bottom-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+footer p{
+    font-size: 10px;
+    text-align: center;
+    margin: 5px;
+}
+@media(min-width:480px) and (max-width:900px){
+    .body nav {
+        flex-direction: row;
+        max-width: 60%;
+    }
+    .baner{
+        height: 400px;
+    }
+    .body .contenido{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        
+    }
+    .articulo{
+        flex-direction: column-reverse;
+        width: 134px;
+    }
+    .img-articulo{
+        width: 134px;
+    }
+    .img-articulo img{
+        width: 130px;
+        
+    }
+    .texto-articulo {
+        width: 134px;
+    }
+    .texto-articulo h2{
+        font-size: 20px;
+        margin-top: 0;
+    }
+    .texto-articulo p{
+        font-size: 15px;
+    }
+    footer p {
+        font-size: 14px;
+    }
+}
+@media(min-width:901px){
+    .body nav {
+        flex-direction: row;
+        max-width: 40%;
+    }
+    .baner{
+        height: 600px;
+    } 
+    .body .contenido{
+        flex-direction: row;
+        flex-wrap: wrap;
+        row-gap: 30px;
+        
+    }
+    .articulo{
+        width: 49%;
+        column-gap: 20px;
+    }
+    .img-articulo{
+        width: auto;
+    }
+    .img-articulo img{
+        width: 150px;
+        padding: 15px;
+        
+    }
+    .texto-articulo {
+        width: auto;
+    }
+    .texto-articulo h2{
+        font-size: 20px;
+        margin-top: 0;
+    }
+    .texto-articulo p{
+        font-size: 15px;
+    }
+    footer p {
+        font-size: 14px;
+    }
+}
